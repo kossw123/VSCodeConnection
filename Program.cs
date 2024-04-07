@@ -14,4 +14,4 @@ public class Init
         this.id = id;
         this.name = name;
     }    
-}
+} 
