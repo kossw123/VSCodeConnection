@@ -1,0 +1,14 @@
+D:\최상위 루트 코드파일\repos\VSCodeEditor\obj\Debug\net7.0\VSCodeEditor.GeneratedMSBuildEditorConfig.editorconfig
+D:\최상위 루트 코드파일\repos\VSCodeEditor\obj\Debug\net7.0\VSCodeEditor.AssemblyInfoInputs.cache
+D:\최상위 루트 코드파일\repos\VSCodeEditor\obj\Debug\net7.0\VSCodeEditor.AssemblyInfo.cs
+D:\최상위 루트 코드파일\repos\VSCodeEditor\obj\Debug\net7.0\VSCodeEditor.csproj.CoreCompileInputs.cache
+D:\최상위 루트 코드파일\repos\VSCodeEditor\bin\Debug\net7.0\VSCodeEditor.exe
+D:\최상위 루트 코드파일\repos\VSCodeEditor\bin\Debug\net7.0\VSCodeEditor.deps.json
+D:\최상위 루트 코드파일\repos\VSCodeEditor\bin\Debug\net7.0\VSCodeEditor.runtimeconfig.json
+D:\최상위 루트 코드파일\repos\VSCodeEditor\bin\Debug\net7.0\VSCodeEditor.dll
+D:\최상위 루트 코드파일\repos\VSCodeEditor\bin\Debug\net7.0\VSCodeEditor.pdb
+D:\최상위 루트 코드파일\repos\VSCodeEditor\obj\Debug\net7.0\VSCodeEditor.dll
+D:\최상위 루트 코드파일\repos\VSCodeEditor\obj\Debug\net7.0\refint\VSCodeEditor.dll
+D:\최상위 루트 코드파일\repos\VSCodeEditor\obj\Debug\net7.0\VSCodeEditor.pdb
+D:\최상위 루트 코드파일\repos\VSCodeEditor\obj\Debug\net7.0\VSCodeEditor.genruntimeconfig.cache
+D:\최상위 루트 코드파일\repos\VSCodeEditor\obj\Debug\net7.0\ref\VSCodeEditor.dll
