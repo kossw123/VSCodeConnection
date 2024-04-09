@@ -4,9 +4,27 @@ using System.Linq.Expressions;
 var array = new int[] { 1, 2, 3,};
 var element = new Element<int>(array);
 
-public class Element<T> : IEnumerable<T>
+
+var query = from e in element
+        where e < 0
+        select e;
+
+
+foreach(var e in query)
+{
+    Console.WriteLine(e.ToString());
+}
+
+public class Element<T> : IQueryable<T>
 {
     private T[] values;
+
+    public Type ElementType => throw new NotImplementedException();
+
+    public Expression Expression => throw new NotImplementedException();
+
+    public IQueryProvider Provider => throw new NotImplementedException();
+
     public Element(T[] list)
     {
         values = new T[list.Length];
