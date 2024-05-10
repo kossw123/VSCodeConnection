@@ -1,16 +1,54 @@
-﻿using CustomProvider;
+﻿
+File document = new File("document.txt");
+
+Console.WriteLine($"Initial permissions: {document.Permissions}");
+
+// Applying permissions dynamically using decorators
+document.ApplyPermission(new ReadOnlyPermissionDecorator());
+document.ApplyPermission(new WriteOnlyPermissionDecorator());
+document.ApplyPermission(new ExecutePermissionDecorator());
+
+Console.WriteLine($"Final permissions: {document.Permissions}");
 
 
-var array = new int[] { 1, 2, 3,};
-var element = new Element<int>(array);
-
-
-var query = from e in element
-        where e < 0
-        select e;
-
-
-foreach(var e in query)
+[Flags]
+public enum Permissions
 {
-    Console.WriteLine(e.ToString());
+    None = 0,
+    Read = 1,
+    Write = 2,
+    Execute = 4
+}
+
+public interface IPermissionDecorator
+{
+    void ApplyPermissions(ref Permissions p);
+}
+public class ReadOnlyPermissionDecorator : IPermissionDecorator
+{
+    public void ApplyPermissions(ref Permissions p) => p |= Permissions.Read;
+}
+public class WriteOnlyPermissionDecorator : IPermissionDecorator
+{
+    public void ApplyPermissions(ref Permissions p) => p |= Permissions.Write;
+}
+public class ExecutePermissionDecorator : IPermissionDecorator
+{
+    public void ApplyPermissions(ref Permissions p) => p |= Permissions.Execute;
+}
+
+public class File
+{
+    public string Name { get; set; }
+    public Permissions Permissions;
+    public File(string name)
+    {
+        Name = name;
+        Permissions = Permissions.None;
+    }
+
+    public void ApplyPermission(IPermissionDecorator decorator)
+    {
+        decorator.ApplyPermissions(ref Permissions);
+    }
 }
